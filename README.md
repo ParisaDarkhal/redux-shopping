@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# Redux-Shopping Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Redux-Shopping is a dummy shopping website created to practice working with Redux, Redux-React, and its middlewares. The project utilizes Bootstrap and React-Bootstrap for styling and interacts with the [FakeStoreAPI](https://fakestoreapi.com/) to fetch fake products for the shopping experience.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Redux-Shopping Project](#redux-shopping-project)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Features](#features)
+  - [MockUp](#mockup)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+  - [Usage](#usage)
+  - [Technologies Used](#technologies-used)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Contact](#contact)
 
-### `npm start`
+## Introduction
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Redux-Shopping is a simple e-commerce website built as a learning project to understand and implement Redux and its related libraries in a React application. The project emulates the typical user flow of an e-commerce platform, allowing users to browse products, add items to their shopping cart, and proceed to the checkout.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- Fetches products from the [FakeStoreAPI](https://fakestoreapi.com/) to create a realistic shopping experience.
+- View a list of products with their details, including name, price and images.
+- Add items to the shopping cart and update quantities.
+- Remove items from the cart.
+- Utilizes Redux for managing the application state efficiently.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## MockUp
 
-### `npm run build`
+![Dashboard](./public/images/dashboard.jpg)
+![Cart](./public/images/cart.jpg)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Make sure you have the following tools installed on your system:
 
-### `npm run eject`
+- Node.js and npm (Node Package Manager)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository from GitHub:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   git clone https://github.com/parisadarkhal/redux-shopping.git
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Navigate to the project directory:
 
-## Learn More
+   ```bash
+   cd redux-shopping
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Install the project dependencies:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   npm install
+   ```
 
-### Code Splitting
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+To start the development server and view the project, run the following command:
 
-### Analyzing the Bundle Size
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The application will be accessible in your browser at `http://localhost:3000`.
 
-### Making a Progressive Web App
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The project utilizes the following technologies:
 
-### Advanced Configuration
+- React: A JavaScript library for building user interfaces.
+- Redux: A predictable state container for managing the application state.
+- Redux-React: Official Redux bindings for React.
+- Redux Middlewares: Middleware library `redux-thunk` was used to handle asynchronous actions.
+- Bootstrap: A popular CSS framework for styling the UI components.
+- React-Bootstrap: React components implementation for Bootstrap styles.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contributing
 
-### Deployment
+Contributions to the Redux-Shopping project are welcome! If you have any suggestions or find any issues, feel free to open an issue or create a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Before submitting a pull request, please ensure that your changes are well-tested and adhere to the project's coding standards.
 
-### `npm run build` fails to minify
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the [MIT License](LICENSE).
+
+## Contact
+
+For any inquiries or questions, you can reach out to the project creator:
+
+- Name: Your Name
+- Email: p.darkhal@gmail.com
+- GitHub: [Your GitHub Profile](https://github.com/parisadarkhal)
