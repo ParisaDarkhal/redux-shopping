@@ -1,8 +1,14 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Button, Card } from "react-bootstrap";
+import { remove } from "./store/cartSlice";
 
 const Cart = () => {
   const products = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+  const removeItem = (id) => {
+    //dispatch a remove action
+    dispatch(remove(id));
+  };
   return (
     <>
       <div className="row ">
@@ -25,7 +31,9 @@ const Cart = () => {
                 <Card.Text> UDS {product.price}</Card.Text>
               </Card.Body>
               <Card.Footer style={{ backgroundColor: "white" }}>
-                <Button variant="danger">Delete</Button>
+                <Button variant="danger" onClick={() => removeItem(product.id)}>
+                  Delete
+                </Button>
               </Card.Footer>
             </Card>
           </div>
