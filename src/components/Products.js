@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import { Button, Card, Container, Row, Col } from "react-bootstrap";
+import { Button, Card, Container, Row, Col, Alert } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { add } from "./store/cartSlice";
 import { getProducts } from "./store/productSlice";
+import StatusCode from "../utils/statusCode";
 
 const Products = () => {
   const dispatch = useDispatch();
-  const { data: products } = useSelector((state) => state.product);
+  const { data: products, status } = useSelector((state) => state.product);
 
   //   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -14,6 +15,17 @@ const Products = () => {
     //dispatch an acion for fetchproducts from productSlice (the action of getProducts)
     dispatch(getProducts());
   }, []);
+
+  if (status === StatusCode.LOADING) {
+    return <p> Loading ...</p>;
+  }
+  if (status === StatusCode.ERROR) {
+    return (
+      <Alert key="danger" variant="danger">
+        Something went wrong, please try again later.
+      </Alert>
+    );
+  }
 
   const addToCart = (product) => {
     //dispatch an add action
